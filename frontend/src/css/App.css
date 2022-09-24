@@ -2,3 +2,12 @@
     display: flex;
     justify-content: space-between;
 }
+
+.center{
+    height: 100%;
+    align-items: 100%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+  }

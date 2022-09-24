@@ -9,5 +9,11 @@ urlpatterns = [
     path("create-post", views.createPost, name="CreatePost"),
     path("post-list", views.postList, name="PostList"),
     path("get-post/<str:pk>", views.getPost, name="GetPost"),
-    path("get-posts-of-following/<str:pk>", views.getFollowingPosts, name="followingPosts")
+    path("get-posts-of-following/<str:pk>", views.getFollowingPosts, name="followingPosts"),
+    path("update-profile/<str:pk>", views.updateProfile, name="UpdateProfile"),
+    path("update-post/<str:pk>", views.updatePost, name="updatePost"),
+    path("follow-user", views.followUser, name="followUser"),
+    path("follow-table", views.followingTable, name="followingTable"),
+    path("check-following/<str:pk>", views.checkFollowing, name="checkFollowing"),
+    path("unfollow/<str:pk>", views.unfollow, name="Unfollow")
 ]

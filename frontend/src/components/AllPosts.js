@@ -94,7 +94,7 @@ function AllPosts({ user }) {
       { allPostsData ? allPostsData.map((post, index) => (
         
         <div 
-          className="center m-2" 
+          className="center center-posts m-2" 
           style={{minWidth: '30%', maxWidth: '400px'}} 
           key={ index }>
             <Card>
@@ -114,7 +114,7 @@ function AllPosts({ user }) {
               <Card.Footer className="text-muted">{ post.created_at }</Card.Footer>
             </Card>
           </div>
-      )) : <p>sdgg</p> }
+      )) : <p>No posts to display</p> }
     </div>
   )
 }

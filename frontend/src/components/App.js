@@ -42,7 +42,7 @@ function App() {
                 </LinkContainer>
               </Nav>
               <Nav>
-                { user ? (<Navbar.Text>Signed in as: 
+                { user ? (<Navbar.Text>Signed in as:
                   <Link to={"/profile/" + user }>{ user }</Link> | {" "}
                   <Button
                       type="button"
@@ -57,8 +57,8 @@ function App() {
                     >
                       Logout
                     </Button>
-                  </Navbar.Text>) 
-                : ( 
+                  </Navbar.Text>)
+                : (
                 <Navbar.Text>
                   <Link to="/login">Not Signed In</Link>
                 </Navbar.Text>
@@ -73,7 +73,7 @@ function App() {
           <Route element={ <AllPosts user={user} />} path="/" exact />
           <Route element={ <Login addAlert={ setAlert } setUser={ setUser } />} path="/login" />
           <Route element={ <SignUp setAlert={ setAlert } setUser={ setUser } />} path="/sign-up" /> {/* sets the alert to true */}
-          <Route element={ <Profile />} path="/profile/:username" />
+          <Route element={ <Profile user={user} setAlert={setAlert} />} path="/profile/:username" />
           <Route element={ <Search />} path="/search" />
           <Route element={ <CreatePost user={user} setAlert={setAlert} />} path="/create-post" />
         </Routes>

@@ -82,8 +82,12 @@ WSGI_APPLICATION = 'instagram.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'bvfkupsskifn7gm3aoqu',
+        'USER': 'ulz8ontz3zfynrk5',
+        'PASSWORD': 'MmpbWaZvaQxjdDX5adiH',
+        'HOST': 'bvfkupsskifn7gm3aoqu-mysql.services.clever-cloud.com',
+        'PORT': '3306',
     }
 }
 
