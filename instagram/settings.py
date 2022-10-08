@@ -138,7 +138,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
 
-    "http://localhost:3000",
-    'http://192.168.42.132:3000',
-    'http://192.168.42.132:3000',
+    "https://socialmedia-xc4s.onrender.com"
 ]
