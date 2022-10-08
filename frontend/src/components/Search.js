@@ -10,7 +10,7 @@ function Search() {
 
 
   function search(e){
-    fetch("http://127.0.0.1:8000/api/getUser/" + searchText)
+    fetch("https://sla.onrender.com/api/getUser/" + searchText)
     .then((res) => res.json())
     .then((data) => {
       if(data){

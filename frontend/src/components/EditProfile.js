@@ -33,12 +33,12 @@ function EditProfile({ show, hideCallback, user, setAlert, profileData }) {
       method: "POST",
       body: formData
     }
-    fetch("http://127.0.0.1:8000/api/getUser/" + user)
+    fetch("https://sla.onrender.com/api/getUser/" + user)
     .then((res) => res.json())
     .then((data) => {
       console.log(data)
       const id = data.id
-      fetch("http://127.0.0.1:8000/api/update-profile/" + id, requestOptions)
+      fetch("https://sla.onrender.com/api/update-profile/" + id, requestOptions)
       .then((res) => res.json())
       .then((profile) => {
         console.log(profile)

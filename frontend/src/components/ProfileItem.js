@@ -8,7 +8,7 @@ function ProfileItem({ username, firstName, lastName, photo, bio, created_at }) 
   const [followers, setFollowers] = useState(0)
   const [following, setFollowing] = useState(0)
 
-  fetch("http://127.0.0.1:8000/api/user-profile/" + username)
+  fetch("https://sla.onrender.com/api/user-profile/" + username)
         .then((res) => res.json())
         .then((profile) => {
           setFollowers(profile.followers)

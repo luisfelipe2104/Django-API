@@ -8,7 +8,7 @@ function Login(props) {
   const navigate = useNavigate()
 
   function handleLogin(e) {
-    fetch("http://127.0.0.1:8000/api/user-profile/" + username)
+    fetch("https://sla.onrender.com/api/user-profile/" + username)
     .then((res) => res.json())
     .then((data) => {
       if (data) {

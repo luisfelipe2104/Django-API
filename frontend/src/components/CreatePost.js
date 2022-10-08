@@ -51,7 +51,7 @@ function CreatePost({ user, setAlert }) {
       method: "POST",
       body: formData,
     }
-    fetch("http://127.0.0.1:8000/api/create-post", requestOptions)
+    fetch("https://sla.onrender.com/api/create-post", requestOptions)
     .then((_res) => {
       setAlert({ variant: "success", message: "Post created!" })
       navigate("/")

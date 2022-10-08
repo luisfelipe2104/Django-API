@@ -11,10 +11,10 @@ function AllPosts({ user }) {
   let posts = followingPosts["posts"]
   const [knownPosts, setKnownPosts] = useState({posts: []})
   let [gambiarra, setGambiarra] = useState({item: []})
-
+  let k = "https://sla.onrender.com/api/userList"
   useEffect(() => {
     if(!user){
-      fetch("http://127.0.0.1:8000/api/post-list")
+      fetch("https://sla.onrender.com/api/post-list")
       .then((res) => res.json())
       .then((data) => {
         setAllPostsData(data)
@@ -22,7 +22,7 @@ function AllPosts({ user }) {
       })
     }
     else{
-      fetch("http://127.0.0.1:8000/api/get-posts-of-following/" + user)
+      fetch("https://sla.onrender.com/api/get-posts-of-following/" + user)
       .then((res) => res.json())
       .then((data) => {
         if(data){
@@ -35,7 +35,7 @@ function AllPosts({ user }) {
           });
         }
         following.forEach((user) => {
-          fetch("http://127.0.0.1:8000/api/get-post/" + user)
+          fetch("https://sla.onrender.com/api/get-post/" + user)
           .then((res) => res.json())
           .then((data) => {
             // console.log(data)

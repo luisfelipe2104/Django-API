@@ -25,7 +25,7 @@ function Profile({user, setAlert}) {
   }, [params.username, user])
 
   function updateFollowing(profile){
-    fetch("http://127.0.0.1:8000/api/user-profile/" + profile)
+    fetch("https://sla.onrender.com/api/user-profile/" + profile)
     .then((res) => res.json())
     .then((data) => {
       console.log(data)
@@ -64,11 +64,11 @@ function Profile({user, setAlert}) {
 
 
   function updateProfile(username){
-    fetch("http://127.0.0.1:8000/api/getUser/" + username)
+    fetch("https://sla.onrender.com/api/getUser/" + username)
     .then((res) => res.json())
     .then((data) => {
       console.log(data.username)
-      fetch("http://127.0.0.1:8000/api/check-following/" + user)
+      fetch("https://sla.onrender.com/api/check-following/" + user)
       .then((res) => {
         return res.json()
       })
@@ -85,7 +85,7 @@ function Profile({user, setAlert}) {
         setAlert({variant: "danger", message: "Profile does not exist."})
         return
       }
-      fetch("http://127.0.0.1:8000/api/get-post/" + username)
+      fetch("https://sla.onrender.com/api/get-post/" + username)
       .then((res) => res.json())
       .then((postes) => {
         setProfileData(data)
@@ -115,7 +115,7 @@ function Profile({user, setAlert}) {
       }),
     }
     if(!following){
-      fetch("http://127.0.0.1:8000/api/follow-user", requestOptions)
+      fetch("https://sla.onrender.com/api/follow-user", requestOptions)
       .then((res) => {
         return res.json()
       })
@@ -125,7 +125,7 @@ function Profile({user, setAlert}) {
       })
     }
     else if(following){
-      fetch("http://127.0.0.1:8000/api/check-following/" + user)
+      fetch("https://sla.onrender.com/api/check-following/" + user)
       .then((res) => {
         return res.json()
       })
@@ -140,7 +140,7 @@ function Profile({user, setAlert}) {
               "Content-Type": "application/json",
             },
           };
-          fetch("http://127.0.0.1:8000/api/unfollow/" + i.id, requestOptions)
+          fetch("https://sla.onrender.com/api/unfollow/" + i.id, requestOptions)
             .then((res) => res.json())
             .then((_data) => updateProfile(params.username))
               }
